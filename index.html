@@ -2,30 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>REST API Interface System</title>
+  <title>REST API Joke Generator System</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <h1>REST API Interface System</h1>
-    <p class="subtitle">University Level Web Integration Project</p>
+    <h1>REST API Joke Generator System</h1>
+    <p class="subtitle">University-Level Web API Integration Project</p>
 
     <div class="card">
-      <h2>API Data Fetcher</h2>
-      <p>Click the button to fetch live data from a REST API.</p>
+      <h2>System Overview</h2>
+      <p class="description">
+        This system demonstrates real-time integration with a public REST API.
+        The application sends asynchronous HTTP requests to an external server
+        to retrieve random jokes in JSON format. The received data is parsed
+        and dynamically displayed on the user interface using modern web
+        technologies.
+      </p>
 
-      <button onclick="getJoke()">Fetch Data</button>
+      <button onclick="getJoke()">Get New Joke</button>
 
       <div class="loader" id="loader"></div>
 
       <div class="result" id="response">
-        API response will appear here...
+        Click "Get New Joke" to fetch a joke from REST API...
       </div>
     </div>
 
     <footer>
-      <p>Developed for Academic REST API Integration</p>
+      <p>Developed for Academic REST API Integration & Web Engineering</p>
     </footer>
   </div>
 

@@ -3,7 +3,7 @@ async function getJoke() {
   const responseDiv = document.getElementById("response");
 
   loader.style.display = "block";
-  responseDiv.innerText = "Fetching data from REST API...";
+  responseDiv.innerText = "Fetching a new joke from REST API...";
 
   try {
     const response = await fetch("https://v2.jokeapi.dev/joke/Any");
@@ -17,6 +17,7 @@ async function getJoke() {
       output = data.setup + " — " + data.delivery;
     }
 
+    // Small delay for smooth UX
     setTimeout(() => {
       loader.style.display = "none";
       responseDiv.innerText = output;
@@ -25,7 +26,7 @@ async function getJoke() {
 
   } catch (error) {
     loader.style.display = "none";
-    responseDiv.innerText = "Error: Unable to connect to REST API.";
-    console.error(error);
+    responseDiv.innerText = "Error: Unable to connect to REST API service.";
+    console.error("REST API Error:", error);
   }
 }

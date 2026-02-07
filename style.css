@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -12,82 +12,90 @@ body {
 
 .container {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   padding: 20px;
   animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: #ffffff;
   margin-bottom: 5px;
+  letter-spacing: 1px;
 }
 
 .subtitle {
   text-align: center;
-  color: #ddd;
-  margin-bottom: 30px;
+  color: #d0d7de;
+  margin-bottom: 35px;
 }
 
 .card {
-  background: white;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
   text-align: center;
-  transform: translateY(20px);
   animation: slideUp 0.8s ease forwards;
 }
 
 .card h2 {
   margin-top: 0;
-  color: #1e3c72;
+  color: #203a43;
+}
+
+.description {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 25px;
 }
 
 button {
-  margin-top: 15px;
-  padding: 12px 30px;
+  margin-top: 10px;
+  padding: 14px 36px;
   font-size: 16px;
+  font-weight: 600;
   border: none;
-  border-radius: 25px;
-  background: #1e3c72;
-  color: white;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #203a43, #2c5364);
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 button:hover {
-  background: #2a5298;
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .result {
-  margin-top: 25px;
-  padding: 20px;
-  min-height: 80px;
-  border-radius: 8px;
-  background: #f4f6fb;
+  margin-top: 30px;
+  padding: 22px;
+  min-height: 90px;
+  border-radius: 10px;
+  background: #f4f7fa;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #222;
   animation: fadeIn 0.5s ease;
 }
 
 footer {
-  margin-top: 20px;
+  margin-top: 25px;
   text-align: center;
-  color: #eee;
+  color: #e5e7eb;
   font-size: 14px;
 }
 
-/* Loader Animation */
+/* Loader */
 .loader {
-  margin: 20px auto;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #1e3c72;
+  margin: 25px auto 10px;
+  border: 5px solid #e0e0e0;
+  border-top: 5px solid #203a43;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   animation: spin 1s linear infinite;
   display: none;
 }
@@ -106,7 +114,7 @@ footer {
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
